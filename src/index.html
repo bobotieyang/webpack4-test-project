@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+  <title>index</title>
+</head>
+<body>
+<div class="head"></div>
+<div class="gundom"></div>
+<% if (htmlWebpackPlugin.options.vendorDllPath) { %>
+  <script src="<%= htmlWebpackPlugin.options.vendorDllPath %>"></script>
+<% } %>
+</body>
+</html>

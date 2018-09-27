@@ -1,0 +1,22 @@
+
+@import './mixin.scss';
+
+
+#app {
+  color: nth($color, 2);
+  font-size: 36px;
+}
+
+.head {
+  background: url(./assets/head.jpg) no-repeat center;
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+}
+
+.gundom {
+  background: url(./assets/gundom.jpg) no-repeat center;
+  width: 200px;
+  height: 200px;
+  background-size: 100%;
+}
