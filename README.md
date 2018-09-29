@@ -18,7 +18,8 @@ webpack4 简单脚手架配置
       "modules": false,
       // 设置成 usage 需要安装 core-js@2
       // 会将用到的es6 API 按需全局引入
-      // 应该不能和下面的 runtime 同时配置
+      // 支持 Promise Array.from Array.prototype.includes 等 会污染全局
+      // 应该不能和下面的 runtime 同时配置 @babel/plugin-transform-runtime corejs: 2
       "useBuiltIns": "usage",
       "targets": {
         "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
