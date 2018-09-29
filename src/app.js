@@ -1,11 +1,15 @@
 import './global.scss';
 import './app.scss';
-import _ from 'lodash';
+// import '@babel/polyfill';
+// import _ from 'lodash';
 import data from './module/data.json';
 
 import './commons';
 
 // 异步加载
+// webpack的异步加载依赖Promise
+// 并且无法通过babel来转换成 builtIns 方式（不污染全局）
+// 需要引入全局的Promise Polyfill
 import ('./module/hello').then(module => {
   module.default()
 });
@@ -20,7 +24,7 @@ div.innerHTML = 'Hello World!!!!';
 
 document.body.appendChild(div);
 
-console.log(_.flatten([1,[2,[3,[4]]]]));
+// console.log(_.flatten([1,[2,[3,[4]]]]));
 
 console.log([1, 211, 3].map(v => v * 10));
 
@@ -39,6 +43,7 @@ let {
   b: 400
 };
 console.log(x, y, z);
+
 
 Promise.resolve('abcd').then(n => console.log('in promise', n));
 
